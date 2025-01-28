@@ -1,0 +1,191 @@
+{
+  "breakfast": {
+    "categoryAdjective": "Popular",
+    "categoryName": "Breakfast",
+    "icon": "fa-coffee",
+    "items": [
+      {
+        "id": 1,
+        "name": "Classic Pancakes",
+        "price": 12.99,
+        "imageUrl": "classic-pancakes.webp",
+        "description": "Fluffy pancakes served with butter, maple syrup, and a side of fresh berries."
+      },
+      {
+        "id": 2,
+        "name": "Eggs Benedict",
+        "price": 14.99,
+        "imageUrl": "eggs-benedict.webp",
+        "description": "Toasted English muffins topped with poached eggs, Canadian bacon, and creamy hollandaise sauce."
+      },
+      {
+        "id": 3,
+        "name": "Avocado Toast",
+        "price": 10.99,
+        "imageUrl": "avocado-toast.webp",
+        "description": "Crispy sourdough bread topped with smashed avocado, cherry tomatoes, and a sprinkle of feta cheese."
+      },
+      {
+        "id": 4,
+        "name": "Breakfast Burrito",
+        "price": 13.99,
+        "imageUrl": "breakfast-burrito.webp",
+        "description": "A hearty burrito filled with scrambled eggs, bacon, cheese, and hash browns, served with salsa."
+      },
+      {
+        "id": 5,
+        "name": "French Toast",
+        "price": 11.99,
+        "imageUrl": "french-toast.webp",
+        "description": "Thick slices of brioche dipped in egg batter, cooked to golden brown and topped with powdered sugar and syrup."
+      },
+      {
+        "id": 6,
+        "name": "Omelette Deluxe",
+        "price": 15.99,
+        "imageUrl": "omelette-deluxe.webp",
+        "description": "A fluffy three-egg omelette loaded with ham, cheese, mushrooms, peppers, and onions."
+      },
+      {
+        "id": 7,
+        "name": "Greek Yogurt Parfait",
+        "price": 9.99,
+        "imageUrl": "greek-yogurt-parfait.webp",
+        "description": "Creamy Greek yogurt layered with granola, honey, and fresh fruit."
+      },
+      {
+        "id": 8,
+        "name": "Smoked Salmon Bagel",
+        "price": 16.99,
+        "imageUrl": "smoked-salmon-bagel.webp",
+        "description": "A toasted bagel topped with cream cheese, smoked salmon, capers, and red onion."
+      }
+    ]
+  },
+  "lunch": {
+    "categoryAdjective": "Special",
+    "categoryName": "Lunch",
+    "icon": "fa-hamburger",
+    "items": [
+      {
+        "id": 9,
+        "name": "Chicken Burger",
+        "price": 25.0,
+        "imageUrl": "chicken-burger.webp",
+        "description": "A juicy grilled chicken patty topped with fresh lettuce, tomatoes, and creamy mayo on a toasted bun."
+      },
+      {
+        "id": 10,
+        "name": "Roast Beef Sandwich",
+        "price": 12.99,
+        "imageUrl": "roast-beef-sandwich.webp",
+        "description": "Tender slices of roast beef piled high on fresh bread with a touch of horseradish and creamy mayo."
+      },
+      {
+        "id": 11,
+        "name": "Alfredo Pizza",
+        "price": 18.99,
+        "imageUrl": "alfredo-pizza.webp",
+        "description": "A creamy Alfredo sauce topped with mozzarella, grilled chicken, and a sprinkle of parmesan."
+      },
+      {
+        "id": 12,
+        "name": "Sirloin Steak",
+        "price": 24.99,
+        "imageUrl": "sirloin-steak.webp",
+        "description": "A juicy and tender sirloin steak grilled to perfection, served with your choice of sides."
+      },
+      {
+        "id": 13,
+        "name": "Protein Bowl",
+        "price": 14.99,
+        "imageUrl": "protein-bowl.webp",
+        "description": "A healthy mix of grilled chicken, quinoa, avocado, and a variety of fresh veggies, topped with a light dressing."
+      },
+      {
+        "id": 14,
+        "name": "Fish and Chips",
+        "price": 16.99,
+        "imageUrl": "fish-and-chips.webp",
+        "description": "Crispy battered fish fillets served with golden fries and a side of tartar sauce."
+      },
+      {
+        "id": 15,
+        "name": "Margherita Pizza",
+        "price": 14.99,
+        "imageUrl": "margherita-pizza.webp",
+        "description": "A classic pizza topped with fresh mozzarella, tomato, basil, and a drizzle of olive oil."
+      },
+      {
+        "id": 16,
+        "name": "Tri Tip",
+        "price": 22.99,
+        "imageUrl": "tri-tip.webp",
+        "description": "Perfectly seasoned and grilled tri tip steak, served with your choice of sides and sauce."
+      }
+    ]
+  },
+  "dinner": {
+    "categoryAdjective": "Lovely",
+    "categoryName": "Dinner",
+    "icon": "fa-utensils",
+    "items": [
+      {
+        "id": 17,
+        "name": "Grilled Salmon",
+        "price": 27.99,
+        "imageUrl": "grilled-salmon.webp",
+        "description": "A perfectly grilled salmon fillet served with a lemon butter sauce and a side of seasonal vegetables."
+      },
+      {
+        "id": 18,
+        "name": "Lamb Chops",
+        "price": 34.99,
+        "imageUrl": "lamb-chops.webp",
+        "description": "Tender and juicy lamb chops marinated in garlic and herbs, served with creamy mashed potatoes."
+      },
+      {
+        "id": 19,
+        "name": "Pasta Primavera",
+        "price": 21.99,
+        "imageUrl": "pasta-primavera.webp",
+        "description": "A colorful medley of fresh vegetables tossed with penne pasta in a light garlic olive oil sauce."
+      },
+      {
+        "id": 20,
+        "name": "Filet Mignon",
+        "price": 39.99,
+        "imageUrl": "filet-mignon.webp",
+        "description": "An 8-ounce filet mignon grilled to perfection, served with a red wine reduction and roasted asparagus."
+      },
+      {
+        "id": 21,
+        "name": "Seafood Risotto",
+        "price": 29.99,
+        "imageUrl": "seafood-risotto.webp",
+        "description": "Creamy risotto cooked with shrimp, scallops, and mussels, seasoned with white wine and parmesan cheese."
+      },
+      {
+        "id": 22,
+        "name": "Stuffed Bell Peppers",
+        "price": 19.99,
+        "imageUrl": "stuffed-bell-peppers.webp",
+        "description": "Bell peppers stuffed with seasoned ground beef, rice, and cheese, baked to perfection and topped with marinara sauce."
+      },
+      {
+        "id": 23,
+        "name": "BBQ Ribs",
+        "price": 26.99,
+        "imageUrl": "bbq-ribs.webp",
+        "description": "Slow-cooked BBQ pork ribs served with coleslaw and a side of cornbread."
+      },
+      {
+        "id": 24,
+        "name": "Eggplant Parmesan",
+        "price": 22.99,
+        "imageUrl": "eggplant-parmesan.webp",
+        "description": "Layers of breaded eggplant, marinara sauce, and melted mozzarella cheese, baked to golden perfection."
+      }
+    ]
+  }
+}
