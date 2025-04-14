@@ -1,0 +1,5 @@
+[
+{"id":"1","name":"Breakfast","adjective":"Popular","icon":"fa-coffee"},
+{"id":"2","name":"Lunch","adjective":"Special","icon":"fa-hamburger"},
+{"id":"3","name":"Dinner","adjective":"Lovely","icon":"fa-utensils"}
+]

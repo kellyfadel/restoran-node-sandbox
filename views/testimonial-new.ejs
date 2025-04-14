@@ -1,0 +1,56 @@
+<% // Set optional variables 
+const message = locals.message || ""; 
+const entries = locals.entries || {}; 
+const errors = locals.errors || [];
+%>
+
+<!-- Hero Start -->
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+  <div class="container text-center my-5 pt-5 pb-4">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">Add Testimonial</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center text-uppercase">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item text-white active" aria-current="page">Add Testimonial</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Hero End -->
+<!-- Navbar & Hero End -->
+
+<!-- Testimonial Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h5 class="section-title ff-secondary text-center text-primary fw-normal">Add your testimonial</h5>
+    </div>
+    <!-- Testimonial Form -->
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <p class="<%= errors.length > 0 ? 'text-danger' : 'text-success' %>"><%= message %></p>
+          <form action="/testimonial" method="post" >
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          
+            <div class="form-floating mb-3">
+              <% let fieldErrors = errors.filter(error => error.path === "content"); %>
+              <textarea class="form-control <%= fieldErrors.length > 0 && 'is-invalid' %>" id="content" name="content" placeholder="Type your testimonial here" style="height: 150px"></textarea>
+              <label for="content">Testimonial</label>
+              <div class="invalid-feedback">
+                <%  fieldErrors.forEach((fieldError) => { %>
+                    <p><%= fieldError.message %></p>
+                <% }) %>
+              </div>
+            </div>
+          
+          
+          
+            <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonial End -->

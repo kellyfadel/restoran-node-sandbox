@@ -1,0 +1,60 @@
+<!-- Hero Start -->
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+    <div class="container text-center my-5 pt-5 pb-4">
+      <h1 class="display-3 text-white mb-3 animated slideInDown"><%= recipe.name %></h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center text-uppercase">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item text-white active" aria-current="page"><%= recipe.name %></li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- Hero End -->
+  
+  <!-- Recipe Details Start -->
+  <div class="container py-5">
+    <div class="row">
+      <!-- Recipe Image -->
+      <div class="col-lg-6 mb-4">
+        <img src="<%= recipe.image %>" class="img-fluid rounded" alt="<%= recipe.name %>">
+      </div>
+  
+      <!-- Recipe Details -->
+      <div class="col-lg-6">
+        <h1 class="mb-3"><%= recipe.name %></h1>
+        <p><strong>Cuisine:</strong> <%= recipe.cuisine %></p>
+        <p><strong>Difficulty:</strong> <%= recipe.difficulty %></p>
+        <p><strong>Prep Time:</strong> <%= recipe.prepTimeMinutes %> mins</p>
+        <p><strong>Cook Time:</strong> <%= recipe.cookTimeMinutes %> mins</p>
+        <p><strong>Servings:</strong> <%= recipe.servings %></p>
+        <p><strong>Calories per Serving:</strong> <%= recipe.caloriesPerServing %> kcal</p>
+        <p><strong>Meal Type:</strong> <%= recipe.mealType.join(", ") %></p>
+        <p><strong>Tags:</strong> <%= recipe.tags.join(", ") %></p>
+        <p><strong>Rating:</strong> <%= recipe.rating %> (Based on <%= recipe.reviewCount %> reviews)</p>
+  
+        <a href="/" class="btn btn-primary mt-3">Back to Recipes</a>
+      </div>
+    </div>
+  
+    <!-- Ingredients and Instructions -->
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <h3 class="mb-3">Ingredients</h3>
+        <ul class="list-group">
+          <% recipe.ingredients.forEach(ingredient => { %>
+            <li class="list-group-item"><%= ingredient %></li>
+          <% }) %>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <h3 class="mb-3">Instructions</h3>
+        <ol class="list-group list-group-numbered">
+          <% recipe.instructions.forEach(step => { %>
+            <li class="list-group-item"><%= step %></li>
+          <% }) %>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- Recipe Details End -->

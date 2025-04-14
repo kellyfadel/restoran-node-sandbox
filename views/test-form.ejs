@@ -1,0 +1,29 @@
+      <!-- Hero Start -->
+      <div class="container-xxl py-5 bg-dark hero-header mb-5">
+        <div class="container text-center my-5 pt-5 pb-4">
+          <h1 class="display-3 text-white mb-3 animated slideInDown">Testimonials</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb justify-content-center text-uppercase">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item text-white active" aria-current="page">Testimonials</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- Hero End -->
+
+<div class="container-xxl py-5">
+    <div class="container">
+
+<form action="/testform" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+<input type="text" class="text" />
+<div class="mb-3">
+  <label for="profilePic" class="form-label">Profile Picture</label>
+  <input class="form-control" type="file" id="profilePic" name="profilePic" >
+</div>
+<button class="submit" type="submit">Submit</button>
+
+</form>
+
+</div></div>

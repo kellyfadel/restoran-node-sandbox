@@ -1,0 +1,90 @@
+<% // Set optional variables 
+const contactRequests = locals.contactRequests || []; 
+const selectedContact = locals.selectedContact || {};
+%>
+
+
+<!-- Hero Start -->
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+  <div class="container text-center my-5 pt-5 pb-4">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Request Response</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center text-uppercase">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item text-white active" aria-current="page">Contact Request Response</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Hero End -->
+
+<div class="container-xxl pt-5 pb-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="mb-4 text-center">Respond to Contact Request</h2>
+
+        <form class="bg-light p-4 rounded shadow mb-4" method="post" action="/loadcontactrequest">
+          <div class="mb-3">
+            <label for="contactRequestSelect" class="form-label">Select Contact Request</label>
+            <select id="contactRequestSelect" class="form-select" name="contactId">
+              <option value="" selected disabled><%= contactRequests.length > 0 ? "-- Please select a request --" : "No requests found." %>  </option>
+              <% contactRequests.forEach(request => {
+                console.log("request._id is: ", request._id);
+                console.log("selectedContact._id is: ", selectedContact._id)
+                %>
+                <option value="<%= request._id %>" <%= request._id?.toString() === selectedContact._id?.toString() ? "selected" : '' %>><%= `${request.name} (${request.date.toLocaleString()})` %></option>
+              <% }) %>
+            </select>
+          </div>
+          <button type="submit"  class="btn btn-primary w-100" <%= contactRequests.length < 1 && "disabled" %>>Load Request</button>
+        </form>
+
+
+        <% if (Object.keys(selectedContact).length > 0) { %>
+            <form method="post" action="postcontactresponse">
+                <input type="hidden" name="id" value="<%= selectedContact._id %>" />
+          <div class="mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="name" name="name" disabled value="<%= selectedContact.name %>" />
+              <label for="name" class="form-label">Name</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="email" name="email" disabled value="<%= selectedContact.email %>" />
+              <label for="email" class="form-label">Email</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="subject" name="subject" disabled value="<%= selectedContact.subject %>" />
+              <label for="subject" class="form-label">Subject</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <textarea class="form-control" id="message" name="message" rows="4" disabled><%= selectedContact.message %></textarea>
+              <label for="message" class="form-label">Message</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="date" name="date" disabled value="<%= selectedContact.date.toLocaleString() %>" />
+              <label for="date" class="form-label">Date Submitted</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <textarea class="form-control" id="response" name="response" rows="4" placeholder="Enter your response here..."></textarea>
+              <label for="response" class="form-label">Your Response</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Response</button>
+        </form>
+         <% } %>
+       
+      </div>
+    </div>
+  </div>
+</div>

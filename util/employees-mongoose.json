@@ -1,0 +1,30 @@
+[
+    {
+      "firstName": "Luca",
+      "lastName": "Valente",
+      "title": "Chef",
+      "byName": "The Alchemist of Flavors",
+      "image": "team-1.jpg"
+    },
+    {
+      "firstName": "Emilio",
+      "lastName": "Duarte",
+      "title": "Chef",
+      "byName": "Master of the Fire and Spice",
+      "image": "team-2.jpg"
+    },
+    {
+      "firstName": "Arjun",
+      "lastName": "Khanna",
+      "title": null,
+      "byName": "The Sultan of Sauces",
+      "image": "team-3.jpg"
+    },
+    {
+      "firstName": "Rafael",
+      "lastName": "Moretti",
+      "title": null,
+      "byName": "The Conductor of Culinary Harmony",
+      "image": "team-4.jpg"
+    }
+  ]

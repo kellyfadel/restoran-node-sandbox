@@ -1,0 +1,52 @@
+<% // Set optional variables 
+const message = locals.message || ""; 
+const entries = locals.entries || {}; 
+const errors = locals.errors || []; %>
+
+<!-- Hero Start -->
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+  <div class="container text-center my-5 pt-5 pb-4">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">Login</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center text-uppercase">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item text-white active" aria-current="page">Login</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Hero End -->
+<!-- Navbar & Hero End -->
+
+<!-- Login Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h5 class="section-title ff-secondary text-center text-primary fw-normal">Login to your account</h5>
+    </div>
+    <!-- Login Form -->
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <p class="text-danger"><%= message %></p>
+          <form action="/auth/login" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <div class="form-floating mb-3">
+              <input type="email" name="email" class="form-control" id="email" placeholder="Email"  value="<%= entries.email %>" />
+              <label for="email">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" name="password" class="form-control" id="password" placeholder="Password"  value="<%= entries.password %>"/>
+              <label for="password">Password</label>
+            </div>
+            <button class="btn btn-primary w-100 py-3" type="submit">Login</button>
+          </form>
+          <div class="text-center mt-3">
+            <p>Don't have an account? <a href="/auth/signup">Sign up here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Login End -->

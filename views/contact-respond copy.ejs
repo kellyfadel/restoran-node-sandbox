@@ -1,0 +1,76 @@
+<!-- Hero Start -->
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+  <div class="container text-center my-5 pt-5 pb-4">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Request Response</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center text-uppercase">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item text-white active" aria-current="page">Contact Request Response</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Hero End -->
+
+<div class="container-xxl pt-5 pb-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h2 class="mb-4 text-center">Respond to Contact Requests</h2>
+
+        <form class="bg-light p-4 rounded shadow mb-4">
+          <div class="mb-3">
+            <label for="contactId" class="form-label">Select Contact Request</label>
+            <select id="contactId" class="form-select" name="contactId">
+              <option value="" selected disabled>-- Please select a request --</option>
+              <option value="1">John Doe - 2025-03-06</option>
+              <option value="2">Jane Smith - 2025-03-05</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Load Request</button>
+        </form>
+
+        <form>
+          <input type="hidden" name="id" value="9999999999999" />
+          <div class="mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="name" name="name" disabled value="John Doe" />
+              <label for="name" class="form-label">Name</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <input type="email" class="form-control" id="email" name="email" disabled value="johndoe@example.com" />
+              <label for="email" class="form-label">Email</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="subject" name="subject" disabled value="Reservation Inquiry" />
+              <label for="subject" class="form-label">Subject</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <textarea class="form-control" id="message" name="message" rows="4" disabled>Hi, I would like to book a table for four on Saturday.</textarea>
+              <label for="message" class="form-label">Message</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="date" name="date" disabled value="2025-03-06" />
+              <label for="date" class="form-label">Date Submitted</label>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="form-floating">
+              <textarea class="form-control" id="response" name="response" rows="4" placeholder="Enter your response here..."></textarea>
+              <label for="response" class="form-label">Your Response</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Send Response</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

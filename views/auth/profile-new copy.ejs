@@ -1,0 +1,66 @@
+<% // Set optional variables 
+const message = locals.message || ""; 
+%>
+
+<!-- Hero Start -->
+<div class="container-xxl py-5 bg-dark hero-header mb-5">
+  <div class="container text-center my-5 pt-5 pb-4">
+    <h1 class="display-3 text-white mb-3 animated slideInDown">Manage Profile</h1>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb justify-content-center text-uppercase">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item text-white active" aria-current="page">Manage Profile</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+<!-- Hero End -->
+<!-- Navbar & Hero End -->
+
+<!-- Profile Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+      <h5 class="section-title ff-secondary text-center text-primary fw-normal">Modify your profile</h5>
+    </div>
+    <!-- Profile Form -->
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <p class="text-success"><%= message %></p>
+          <form action="/auth/profile" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" required value="<%= user.firstName %>" />
+              <label for="firstname">First Name</label>
+            </div>
+          
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" required value="<%= user.lastName %>"/>
+              <label for="lastname">Last Name</label>
+            </div>
+          
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email" required value="<%= user.email %>"/>
+              <label for="email">Email</label>
+            </div>
+          
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="profession" name="profession" placeholder="Profession" value="<%= user.profession || '' %>"/>
+              <label for="profession">Profession</label>
+            </div>
+          
+            <div class="mb-3">
+              <label for="profilePic" class="form-label">Profile Picture</label>
+              <input class="form-control" type="file" id="profilePic" name="profilePic" accept="image/*">
+            </div>
+          
+            <button class="btn btn-primary w-100 py-3" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Profile End -->
