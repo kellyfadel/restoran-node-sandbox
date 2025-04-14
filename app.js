@@ -35,6 +35,10 @@ const MenuItem = require("./models//sequelize/menu-item-model");
 // Database connection string
 const MONGODB_URI = process.env.MONGODB_URI;
 
+if (process.env === 'production') {
+  console.log = function () {};
+}
+
 // Initialize session store
 const store = new MongoDBStore({
   uri: MONGODB_URI,
